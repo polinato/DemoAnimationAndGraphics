@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="240.0" minWidth="320.0" prefHeight="600.0" prefWidth="800.0"
+      styleClass="bg" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ua.tpm.aplication.demoanimationandgraphics.controllers.AnimationsViewController">
+    <children>
+        <HBox minHeight="240.0" minWidth="320.0" prefHeight="600.0" prefWidth="800.0">
+            <children>
+                <StackPane fx:id="stackpaneA" prefHeight="600.0" prefWidth="800.0" />
+            </children>
+        </HBox>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+            <children>
+                <ToolBar maxHeight="40.0" maxWidth="90.0" minHeight="40.0" minWidth="90.0" prefHeight="40.0" prefWidth="90.0" styleClass="line">
+                    <items>
+                        <ToggleButton fx:id="tba1" mnemonicParsing="false" onAction="#handleActionToggle" selected="true" text="1" toggleGroup="$togglegroup">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="togglegroup" />
+                            </toggleGroup>
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                        </ToggleButton>
+                        <ToggleButton fx:id="tba2" mnemonicParsing="false" onAction="#handleActionToggle" text="2" toggleGroup="$togglegroup">
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                        <ToggleButton fx:id="tba3" mnemonicParsing="false" onAction="#handleActionToggle" text="3" toggleGroup="$togglegroup">
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                    </items>
+                </ToolBar>
+                <ToolBar minHeight="40.0" minWidth="290.0" prefHeight="40.0" prefWidth="200.0" styleClass="line">
+                    <items>
+                        <Label fx:id="labelRate" minHeight="25.0" text="Rate" />
+                        <Button minHeight="25.0" mnemonicParsing="false" onAction="#handleActionRate" styleClass="buttons" text="+" />
+                        <Button minHeight="25.0" mnemonicParsing="false" onAction="#handleActionRate" styleClass="buttons" text="-" />
+                        <Button fx:id="bPlay" minHeight="25.0" mnemonicParsing="false" onAction="#handleActionPlay" styleClass="buttons" text="Play" />
+                        <Button minHeight="25.0" mnemonicParsing="false" onAction="#handleActionStop" styleClass="buttons" text="Stop" />
+                        <Button minHeight="25.0" mnemonicParsing="false" onAction="#handleActionNextAnim" styleClass="buttons" text="Next Animation" />
+                    </items>
+                    <HBox.margin>
+                        <Insets left="5.0" />
+                    </HBox.margin>
+                </ToolBar>
+            </children>
+        </HBox>
+    </children>
+</VBox>

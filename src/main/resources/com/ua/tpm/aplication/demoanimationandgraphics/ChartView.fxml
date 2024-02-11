@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="240.0" minWidth="320.0" prefHeight="400.0" prefWidth="600.0"
+      styleClass="bg" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ua.tpm.aplication.demoanimationandgraphics.controllers.ChartViewController">
+    <children>
+        <StackPane fx:id="stackpane" prefHeight="800.0" prefWidth="800.0" />
+        <HBox alignment="CENTER" prefHeight="40.0" prefWidth="600.0">
+            <children>
+                <ToolBar maxWidth="244.0" minWidth="185.0" prefHeight="35.0" prefWidth="241.0" styleClass="line">
+                    <items>
+                        <Button mnemonicParsing="false" onAction="#handleActionGetRandom" styleClass="buttons" text="Random Data" />
+                        <ToggleButton fx:id="tb1" mnemonicParsing="false" onAction="#handleActionGetChart" text="1">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="chartgroup" />
+                            </toggleGroup>
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                        <ToggleButton fx:id="tb2" mnemonicParsing="false" onAction="#handleActionGetChart" text="2" toggleGroup="$chartgroup">
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                        <ToggleButton fx:id="tb3" mnemonicParsing="false" onAction="#handleActionGetChart" text="3" toggleGroup="$chartgroup">
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                        <ToggleButton fx:id="tb4" mnemonicParsing="false" onAction="#handleActionGetChart" text="4" toggleGroup="$chartgroup">
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                        <ToggleButton fx:id="tb5" mnemonicParsing="false" onAction="#handleActionGetChart" text="5" toggleGroup="$chartgroup">
+                     <styleClass>
+                        <String fx:value="classButton" />
+                        <String fx:value="buttons" />
+                     </styleClass></ToggleButton>
+                    </items>
+                </ToolBar>
+            </children>
+        </HBox>
+    </children>
+</VBox>
